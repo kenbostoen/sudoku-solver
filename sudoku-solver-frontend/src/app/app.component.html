@@ -1,0 +1,8 @@
+<div class="wrapper">
+  <button (click)="solve()">solve</button>
+  <table class="board">
+    <tr class="row" *ngFor="let row of board; let i = index">
+      <td class="field" *ngFor="let field of row; let j = index" (click)="updateValue(i,j)">{{field ? field : ''}}</td>
+    </tr>
+  </table>
+</div>
